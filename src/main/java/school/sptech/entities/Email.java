@@ -1,5 +1,8 @@
-package school.sptech.useCases;
+package school.sptech.entities;
 
+import jakarta.persistence.Embeddable;
+
+@Embeddable
 public class Email {
     private final String value;
 

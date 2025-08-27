@@ -1,15 +1,31 @@
-package school.sptech.useCases;
+package school.sptech.entities;
 
-import jakarta.persistence.Entity;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
 import org.hibernate.validator.constraints.br.CPF;
+import school.sptech.entities.Cpf;
+import school.sptech.entities.Telefone;
 
 @Entity
 public class Cliente {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String nome;
+
+    @Embedded
+    @AttributeOverride(name = "value", column = @Column(name = "email"))
     private Email email;
+
+    @Embedded
+    @AttributeOverride(name = "value", column = @Column(name = "telefone"))
     private Telefone telefone;
+
+    @Embedded
+    @AttributeOverride(name = "value", column = @Column(name = "cpf"))
     private Cpf cpf;
+
     private float rendaMensal;
     private int idade;
     private String profissao;
