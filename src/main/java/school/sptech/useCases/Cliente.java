@@ -26,6 +26,9 @@ public class Cliente {
         this.profissao = profissao;
     }
 
+    public Cliente() {
+    }
+
     public int getId() {
         return id;
     }
