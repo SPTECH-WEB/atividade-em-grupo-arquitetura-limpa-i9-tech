@@ -7,6 +7,30 @@ A solução foi pensada para ser **modular, extensível e preparada para integra
 
 ---
 
+## 👥 Integrantes
+
+| Nome             | RA       |
+|------------------|----------|
+| Guilherme Borin  | 01232168 |
+| Isabela Rosa     | 01232152 |
+| Maykon Nogueira  | 01241215 |
+| Walleska Lima    | 01241124 |
+| Yasmim Conceição | 01241046 |
+
+---
+
+## 🛠️ Divisão de Tarefas
+
+| Integrante       | Tarefa                 |
+|------------------|------------------------|
+| Guilherme Borin  | ReadMe                 |
+| Isabela Rosa     | Principais Classes     |
+| Maykon Nogueira  | EndPoints e Controller |
+| Walleska Lima    | Enum                   |
+| Yasmim Conceição | DTO´s                  |
+
+---
+
 ## 🧠 Contexto
 
 Uma fintech está desenvolvendo um sistema para facilitar a **análise de crédito de novos clientes**. O objetivo desta API é permitir:
