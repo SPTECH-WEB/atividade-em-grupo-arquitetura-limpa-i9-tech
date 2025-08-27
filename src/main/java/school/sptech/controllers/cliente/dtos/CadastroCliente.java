@@ -1,10 +1,9 @@
 package school.sptech.controllers.cliente.dtos;
 
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Positive;
-import jakarta.validation.constraints.PositiveOrZero;
-import jakarta.validation.constraints.Size;
-import org.hibernate.annotations.processing.Pattern;
+import jakarta.validation.constraints.*;
+import school.sptech.useCases.Email;
+import school.sptech.useCases.Cpf;
+import school.sptech.useCases.Telefone;
 
 public class CadastroCliente {
 

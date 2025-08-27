@@ -1,7 +1,8 @@
 package school.sptech.controllers.cliente.dtos;
 
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.PositiveOrZero;
+import school.sptech.useCases.Cpf;
+import school.sptech.useCases.Email;
+import school.sptech.useCases.Telefone;
 
 public class RespostaCliente {
 
@@ -13,7 +14,7 @@ public class RespostaCliente {
     private float rendaMensal;
     private int idade;
     private String profissao;
-    private ClassificacaoRisco risco;
+    // private ClassificacaoRisco risco;
 
     public RespostaCliente(int id, String nome, Email email, Telefone telefone, Cpf cpf, float rendaMensal, int idade, String profissao, ClassificacaoRisco risco) {
         this.id = id;
@@ -25,6 +26,9 @@ public class RespostaCliente {
         this.idade = idade;
         this.profissao = profissao;
         this.risco = risco;
+    }
+
+    public RespostaCliente() {
     }
 
     public int getId() {
@@ -91,11 +95,11 @@ public class RespostaCliente {
         this.profissao = profissao;
     }
 
-    public ClassificacaoRisco getRisco() {
-        return risco;
-    }
-
-    public void setRisco(ClassificacaoRisco risco) {
-        this.risco = risco;
-    }
+//    public ClassificacaoRisco getRisco() {
+//        return risco;
+//    }
+//
+//    public void setRisco(ClassificacaoRisco risco) {
+//        this.risco = risco;
+//    }
 }
