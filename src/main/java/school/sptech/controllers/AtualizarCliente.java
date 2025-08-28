@@ -1,9 +1,9 @@
-package school.sptech.controllers.cliente.dtos;
+package school.sptech.controllers;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.PositiveOrZero;
-import school.sptech.useCases.Email;
-import school.sptech.useCases.Telefone;
+import school.sptech.entities.Email;
+import school.sptech.entities.Telefone;
 
 public class AtualizarCliente {
     @NotBlank

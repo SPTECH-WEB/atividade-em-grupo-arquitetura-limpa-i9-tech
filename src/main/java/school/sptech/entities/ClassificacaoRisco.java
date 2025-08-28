@@ -1,4 +1,4 @@
-package school.sptech.interfaces;
+package school.sptech.entities;
 
 public enum ClassificacaoRisco {
 
@@ -23,10 +23,10 @@ public enum ClassificacaoRisco {
     }
 
     public static ClassificacaoRisco avaliarClassificacao(float rendaMensal, int idade){
-        if (rendaMensal < 3.000){
-            return ALTO;
-        } else if(rendaMensal > 6.000 && idade > 30){
+        if (rendaMensal > 6000 && idade > 30){
             return BAIXO;
+        } else if(rendaMensal < 3000){
+            return ALTO;
         } else {
             return MEDIO;
         }

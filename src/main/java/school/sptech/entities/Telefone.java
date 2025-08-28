@@ -4,7 +4,10 @@ import jakarta.persistence.Embeddable;
 
 @Embeddable
 public class Telefone {
-    private final String value;
+    private String value;
+
+    protected Telefone() {
+    }
 
     public Telefone(String value) {
         if (value == null || value.replaceAll("\\D", "").length() < 10) {

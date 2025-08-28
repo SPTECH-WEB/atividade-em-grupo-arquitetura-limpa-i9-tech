@@ -1,6 +1,8 @@
-package school.sptech.controllers.cliente.dtos;
+package school.sptech.controllers;
 
-import school.sptech.useCases.Cliente;
+
+import school.sptech.entities.Cliente;
+import school.sptech.entities.ClassificacaoRisco;
 
 public class MapperCliente {
 
@@ -37,7 +39,7 @@ public class MapperCliente {
         return entity;
     }
 
-    public static RespostaCliente toResponseDto(Cliente entity) {
+    public static RespostaCliente toResponseDto(Cliente entity, ClassificacaoRisco risco) {
         if (entity == null) {
             return null;
         }
@@ -51,7 +53,7 @@ public class MapperCliente {
         response.setRendaMensal(entity.getRendaMensal());
         response.setIdade(entity.getIdade());
         response.setProfissao(entity.getProfissao());
-        // response.setRisco(entity.getRisco);
+        response.setRisco(risco);
 
         return response;
     }

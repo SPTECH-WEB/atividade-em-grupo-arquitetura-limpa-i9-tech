@@ -1,10 +1,7 @@
 package school.sptech.entities;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.Email;
-import org.hibernate.validator.constraints.br.CPF;
-import school.sptech.entities.Cpf;
-import school.sptech.entities.Telefone;
+
 
 @Entity
 public class Cliente {

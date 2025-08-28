@@ -4,7 +4,10 @@ import jakarta.persistence.Embeddable;
 
 @Embeddable
 public class Email {
-    private final String value;
+    private String value;
+
+    protected Email() {
+    }
 
     public Email(String value) {
         if (value == null || !value.contains("@")) {

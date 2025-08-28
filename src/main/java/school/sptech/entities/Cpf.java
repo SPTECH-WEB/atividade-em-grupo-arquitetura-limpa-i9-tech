@@ -4,7 +4,10 @@ import jakarta.persistence.Embeddable;
 
 @Embeddable
 public class Cpf {
-    private final String value;
+    private String value;
+
+    protected Cpf() {
+    }
 
     public Cpf(String value) {
         if (value == null || !value.matches("\\d{3}\\.\\d{3}\\.\\d{3}-\\d{2}")) {

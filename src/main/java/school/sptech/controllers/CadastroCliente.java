@@ -1,9 +1,9 @@
-package school.sptech.controllers.cliente.dtos;
+package school.sptech.controllers;
 
 import jakarta.validation.constraints.*;
-import school.sptech.useCases.Email;
-import school.sptech.useCases.Cpf;
-import school.sptech.useCases.Telefone;
+import school.sptech.entities.Cpf;
+import school.sptech.entities.Telefone;
+import school.sptech.entities.Email;
 
 public class CadastroCliente {
 
