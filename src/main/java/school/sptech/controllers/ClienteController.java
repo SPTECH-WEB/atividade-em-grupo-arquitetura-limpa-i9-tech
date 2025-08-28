@@ -3,6 +3,8 @@ package school.sptech.controllers;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+import school.sptech.controllers.dtos.CadastroCliente;
+import school.sptech.controllers.dtos.RespostaCliente;
 import school.sptech.useCases.ClienteService;
 import school.sptech.entities.Cliente;
 import school.sptech.entities.ClassificacaoRisco;

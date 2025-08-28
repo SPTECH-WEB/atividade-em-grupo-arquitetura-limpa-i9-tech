@@ -1,4 +1,4 @@
-package school.sptech.controllers;
+package school.sptech.controllers.dtos;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.PositiveOrZero;

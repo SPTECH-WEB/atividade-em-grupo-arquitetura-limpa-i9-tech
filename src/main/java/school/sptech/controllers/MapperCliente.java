@@ -1,6 +1,9 @@
 package school.sptech.controllers;
 
 
+import school.sptech.controllers.dtos.AtualizarCliente;
+import school.sptech.controllers.dtos.CadastroCliente;
+import school.sptech.controllers.dtos.RespostaCliente;
 import school.sptech.entities.Cliente;
 import school.sptech.entities.ClassificacaoRisco;
 

@@ -1,4 +1,4 @@
-package school.sptech.controllers;
+package school.sptech.controllers.dtos;
 
 import school.sptech.entities.Cpf;
 import school.sptech.entities.Email;

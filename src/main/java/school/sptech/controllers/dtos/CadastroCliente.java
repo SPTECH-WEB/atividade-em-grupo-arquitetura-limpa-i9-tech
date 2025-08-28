@@ -1,4 +1,4 @@
-package school.sptech.controllers;
+package school.sptech.controllers.dtos;
 
 import jakarta.validation.constraints.*;
 import school.sptech.entities.Cpf;
