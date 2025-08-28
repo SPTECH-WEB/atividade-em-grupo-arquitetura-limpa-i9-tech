@@ -1,37 +1,22 @@
-package school.sptech.entities;
+package school.sptech.controllers.cliente.dtos;
 
-import jakarta.persistence.*;
-import jakarta.validation.constraints.Email;
-import org.hibernate.validator.constraints.br.CPF;
-import school.sptech.entities.Cpf;
-import school.sptech.entities.Telefone;
+import school.sptech.useCases.Cpf;
+import school.sptech.useCases.Email;
+import school.sptech.useCases.Telefone;
 
-@Entity
-public class Cliente {
+public class RespostaCliente {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String nome;
-
-    @Embedded
-    @AttributeOverride(name = "value", column = @Column(name = "email"))
     private Email email;
-
-    @Embedded
-    @AttributeOverride(name = "value", column = @Column(name = "telefone"))
     private Telefone telefone;
-
-    @Embedded
-    @AttributeOverride(name = "value", column = @Column(name = "cpf"))
     private Cpf cpf;
-
     private float rendaMensal;
     private int idade;
     private String profissao;
-    //adicionar ENUM
+    // private ClassificacaoRisco risco;
 
-    public Cliente(int id, String nome, Email email, Telefone telefone, Cpf cpf, float rendaMensal, int idade, String profissao) {
+    public RespostaCliente(int id, String nome, Email email, Telefone telefone, Cpf cpf, float rendaMensal, int idade, String profissao, ClassificacaoRisco risco) {
         this.id = id;
         this.nome = nome;
         this.email = email;
@@ -40,9 +25,10 @@ public class Cliente {
         this.rendaMensal = rendaMensal;
         this.idade = idade;
         this.profissao = profissao;
+        this.risco = risco;
     }
 
-    public Cliente() {
+    public RespostaCliente() {
     }
 
     public int getId() {
@@ -108,4 +94,12 @@ public class Cliente {
     public void setProfissao(String profissao) {
         this.profissao = profissao;
     }
+
+//    public ClassificacaoRisco getRisco() {
+//        return risco;
+//    }
+//
+//    public void setRisco(ClassificacaoRisco risco) {
+//        this.risco = risco;
+//    }
 }

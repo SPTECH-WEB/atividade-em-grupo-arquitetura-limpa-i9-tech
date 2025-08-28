@@ -1,38 +1,34 @@
-package school.sptech.entities;
+package school.sptech.controllers.cliente.dtos;
 
-import jakarta.persistence.*;
-import jakarta.validation.constraints.Email;
-import org.hibernate.validator.constraints.br.CPF;
-import school.sptech.entities.Cpf;
-import school.sptech.entities.Telefone;
+import jakarta.validation.constraints.*;
+import school.sptech.useCases.Email;
+import school.sptech.useCases.Cpf;
+import school.sptech.useCases.Telefone;
 
-@Entity
-public class Cliente {
+public class CadastroCliente {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    @NotBlank
     private String nome;
 
-    @Embedded
-    @AttributeOverride(name = "value", column = @Column(name = "email"))
+    @NotBlank
     private Email email;
 
-    @Embedded
-    @AttributeOverride(name = "value", column = @Column(name = "telefone"))
+    @NotBlank
     private Telefone telefone;
 
-    @Embedded
-    @AttributeOverride(name = "value", column = @Column(name = "cpf"))
+    @NotBlank
     private Cpf cpf;
 
+    @PositiveOrZero
     private float rendaMensal;
-    private int idade;
-    private String profissao;
-    //adicionar ENUM
 
-    public Cliente(int id, String nome, Email email, Telefone telefone, Cpf cpf, float rendaMensal, int idade, String profissao) {
-        this.id = id;
+    @PositiveOrZero
+    private int idade;
+
+    private String profissao;
+
+
+    public CadastroCliente(String nome, Email email, Telefone telefone, Cpf cpf, float rendaMensal, int idade, String profissao) {
         this.nome = nome;
         this.email = email;
         this.telefone = telefone;
@@ -42,22 +38,11 @@ public class Cliente {
         this.profissao = profissao;
     }
 
-    public Cliente() {
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getNome() {
+    public @NotBlank String getNome() {
         return nome;
     }
 
-    public void setNome(String nome) {
+    public void setNome(@NotBlank String nome) {
         this.nome = nome;
     }
 
@@ -85,19 +70,21 @@ public class Cliente {
         this.cpf = cpf;
     }
 
+    @PositiveOrZero
     public float getRendaMensal() {
         return rendaMensal;
     }
 
-    public void setRendaMensal(float rendaMensal) {
+    public void setRendaMensal(@PositiveOrZero float rendaMensal) {
         this.rendaMensal = rendaMensal;
     }
 
+    @PositiveOrZero
     public int getIdade() {
         return idade;
     }
 
-    public void setIdade(int idade) {
+    public void setIdade(@PositiveOrZero int idade) {
         this.idade = idade;
     }
 
